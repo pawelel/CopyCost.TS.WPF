@@ -1,8 +1,5 @@
 ﻿using System.Collections.ObjectModel;
-
 using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
-
 using CopyCost.TS.WPF.Contracts.ViewModels;
 using CopyCost.TS.WPF.Core.Contracts.Services;
 using CopyCost.TS.WPF.Core.Models;
@@ -14,18 +11,18 @@ public class CustomersViewModel : ObservableObject, INavigationAware
     private readonly ISampleDataService _sampleDataService;
     private SampleOrder _selected;
 
-    public SampleOrder Selected
-    {
-        get { return _selected; }
-        set { SetProperty(ref _selected, value); }
-    }
-
-    public ObservableCollection<SampleOrder> SampleItems { get; private set; } = new ObservableCollection<SampleOrder>();
-
     public CustomersViewModel(ISampleDataService sampleDataService)
     {
         _sampleDataService = sampleDataService;
     }
+
+    public SampleOrder Selected
+    {
+        get => _selected;
+        set => SetProperty(ref _selected, value);
+    }
+
+    public ObservableCollection<SampleOrder> SampleItems { get; } = new();
 
     public async void OnNavigatedTo(object parameter)
     {
@@ -33,10 +30,7 @@ public class CustomersViewModel : ObservableObject, INavigationAware
 
         var data = await _sampleDataService.GetListDetailsDataAsync();
 
-        foreach (var item in data)
-        {
-            SampleItems.Add(item);
-        }
+        foreach (var item in data) SampleItems.Add(item);
 
         Selected = SampleItems.First();
     }

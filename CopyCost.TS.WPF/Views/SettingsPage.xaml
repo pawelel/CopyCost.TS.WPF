@@ -68,7 +68,8 @@
                             IsChecked="{Binding Theme, Mode=OneWay, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Default}">
                             <i:Interaction.Triggers>
                                 <i:EventTrigger EventName="Checked">
-                                    <i:InvokeCommandAction Command="{Binding SetThemeCommand}" CommandParameter="Default" />
+                                    <i:InvokeCommandAction Command="{Binding SetThemeCommand}"
+                                                           CommandParameter="Default" />
                                 </i:EventTrigger>
                             </i:Interaction.Triggers>
                         </RadioButton>

@@ -7,7 +7,7 @@ namespace CopyCost.TS.WPF.Core.Services;
 public class DatabaseService : IDatabaseService
 {
     private readonly ApplicationDbContext _dbContext;
-    
+
     public DatabaseService(ApplicationDbContext dbContext)
     {
         _dbContext = dbContext;
@@ -41,11 +41,11 @@ public class DatabaseService : IDatabaseService
 
     public async Task<IEnumerable<Payment>> GetPaymentsByDateAsync(DateTime date)
     {
-       return await _dbContext.Payments
-           .Include(p => p.Customer)
-           .Include(p => p.Category).AsNoTracking()
-           .Where(p => p.Date == date)
-           .ToListAsync();
+        return await _dbContext.Payments
+            .Include(p => p.Customer)
+            .Include(p => p.Category).AsNoTracking()
+            .Where(p => p.Date == date)
+            .ToListAsync();
     }
 
     public async Task<Payment> GetPaymentByIdAsync(int paymentId)
@@ -72,8 +72,8 @@ public class DatabaseService : IDatabaseService
 
     public async Task<Customer> GetCustomerByIdAsync(int customerId)
     {
-       return await _dbContext.Customers
-           .FirstOrDefaultAsync(c => c.CustomerId == customerId);
+        return await _dbContext.Customers
+            .FirstOrDefaultAsync(c => c.CustomerId == customerId);
     }
 
     public async Task<IEnumerable<Category>> GetCategoriesAsync()
@@ -83,8 +83,8 @@ public class DatabaseService : IDatabaseService
 
     public async Task<Category> GetCategoryByIdAsync(int categoryId)
     {
-       return await _dbContext.Categories
-           .FirstOrDefaultAsync(c => c.CategoryId == categoryId);
+        return await _dbContext.Categories
+            .FirstOrDefaultAsync(c => c.CategoryId == categoryId);
     }
 
     public async Task<bool> AddPaymentAsync(Payment payment)
@@ -102,7 +102,7 @@ public class DatabaseService : IDatabaseService
     public async Task<bool> DeletePaymentAsync(int paymentId)
     {
         var payment = await GetPaymentByIdAsync(paymentId);
-        if(payment == null) return false;
+        if (payment == null) return false;
         _dbContext.Payments.Remove(payment);
         return await _dbContext.SaveChangesAsync() > 0;
     }
@@ -122,7 +122,7 @@ public class DatabaseService : IDatabaseService
     public async Task<bool> DeleteCustomerAsync(int customerId)
     {
         var customer = await GetCustomerByIdAsync(customerId);
-        if(customer == null) return false;
+        if (customer == null) return false;
         _dbContext.Customers.Remove(customer);
         return await _dbContext.SaveChangesAsync() > 0;
     }
@@ -142,7 +142,7 @@ public class DatabaseService : IDatabaseService
     public async Task<bool> DeleteCategoryAsync(int categoryId)
     {
         var category = await GetCategoryByIdAsync(categoryId);
-        if(category == null) return false;
+        if (category == null) return false;
         _dbContext.Categories.Remove(category);
         return await _dbContext.SaveChangesAsync() > 0;
     }

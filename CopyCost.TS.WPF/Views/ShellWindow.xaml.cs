@@ -1,8 +1,6 @@
 ﻿using System.Windows.Controls;
-
 using CopyCost.TS.WPF.Contracts.Views;
 using CopyCost.TS.WPF.ViewModels;
-
 using MahApps.Metro.Controls;
 
 namespace CopyCost.TS.WPF.Views;
@@ -16,11 +14,17 @@ public partial class ShellWindow : MetroWindow, IShellWindow
     }
 
     public Frame GetNavigationFrame()
-        => shellFrame;
+    {
+        return shellFrame;
+    }
 
     public void ShowWindow()
-        => Show();
+    {
+        Show();
+    }
 
     public void CloseWindow()
-        => Close();
+    {
+        Close();
+    }
 }

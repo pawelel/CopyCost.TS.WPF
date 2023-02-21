@@ -1,7 +1,5 @@
 ﻿using System.Windows.Controls;
-
 using CommunityToolkit.Mvvm.ComponentModel;
-
 using CopyCost.TS.WPF.Contracts.Services;
 using CopyCost.TS.WPF.ViewModels;
 using CopyCost.TS.WPF.Views;
@@ -10,7 +8,7 @@ namespace CopyCost.TS.WPF.Services;
 
 public class PageService : IPageService
 {
-    private readonly Dictionary<string, Type> _pages = new Dictionary<string, Type>();
+    private readonly Dictionary<string, Type> _pages = new();
     private readonly IServiceProvider _serviceProvider;
 
     public PageService(IServiceProvider serviceProvider)
@@ -28,9 +26,7 @@ public class PageService : IPageService
         lock (_pages)
         {
             if (!_pages.TryGetValue(key, out pageType))
-            {
                 throw new ArgumentException($"Page not found: {key}. Did you forget to call PageService.Configure?");
-            }
         }
 
         return pageType;
@@ -50,15 +46,12 @@ public class PageService : IPageService
         {
             var key = typeof(TVm).FullName;
             if (_pages.ContainsKey(key))
-            {
                 throw new ArgumentException($"The key {key} is already configured in PageService");
-            }
 
             var type = typeof(TV);
             if (_pages.Any(p => p.Value == type))
-            {
-                throw new ArgumentException($"This type is already configured with key {_pages.First(p => p.Value == type).Key}");
-            }
+                throw new ArgumentException(
+                    $"This type is already configured with key {_pages.First(p => p.Value == type).Key}");
 
             _pages.Add(key, type);
         }

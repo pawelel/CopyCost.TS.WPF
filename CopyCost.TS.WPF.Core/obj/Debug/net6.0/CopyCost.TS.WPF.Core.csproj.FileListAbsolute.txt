@@ -1,0 +1,12 @@
+D:\Private\CopyCost.TS.WPF\CopyCost.TS.WPF.Core\bin\Debug\net6.0\CopyCost.TS.WPF.Core.deps.json
+D:\Private\CopyCost.TS.WPF\CopyCost.TS.WPF.Core\bin\Debug\net6.0\CopyCost.TS.WPF.Core.dll
+D:\Private\CopyCost.TS.WPF\CopyCost.TS.WPF.Core\bin\Debug\net6.0\CopyCost.TS.WPF.Core.pdb
+D:\Private\CopyCost.TS.WPF\CopyCost.TS.WPF.Core\obj\Debug\net6.0\CopyCost.TS.WPF.Core.csproj.AssemblyReference.cache
+D:\Private\CopyCost.TS.WPF\CopyCost.TS.WPF.Core\obj\Debug\net6.0\CopyCost.TS.WPF.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Private\CopyCost.TS.WPF\CopyCost.TS.WPF.Core\obj\Debug\net6.0\CopyCost.TS.WPF.Core.AssemblyInfoInputs.cache
+D:\Private\CopyCost.TS.WPF\CopyCost.TS.WPF.Core\obj\Debug\net6.0\CopyCost.TS.WPF.Core.AssemblyInfo.cs
+D:\Private\CopyCost.TS.WPF\CopyCost.TS.WPF.Core\obj\Debug\net6.0\CopyCost.TS.WPF.Core.csproj.CoreCompileInputs.cache
+D:\Private\CopyCost.TS.WPF\CopyCost.TS.WPF.Core\obj\Debug\net6.0\CopyCost.TS.WPF.Core.dll
+D:\Private\CopyCost.TS.WPF\CopyCost.TS.WPF.Core\obj\Debug\net6.0\refint\CopyCost.TS.WPF.Core.dll
+D:\Private\CopyCost.TS.WPF\CopyCost.TS.WPF.Core\obj\Debug\net6.0\CopyCost.TS.WPF.Core.pdb
+D:\Private\CopyCost.TS.WPF\CopyCost.TS.WPF.Core\obj\Debug\net6.0\ref\CopyCost.TS.WPF.Core.dll

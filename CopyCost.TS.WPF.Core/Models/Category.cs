@@ -4,12 +4,11 @@ namespace CopyCost.TS.WPF.Core.Models;
 
 public partial class Category : ObservableObject
 {
-    [ObservableProperty]
-    private int _categoryId;
-    [ObservableProperty]
-    private string _name;
-    [ObservableProperty]
-    private string _description;
-    [ObservableProperty]
-    private ICollection<Payment> _payments;
+    [ObservableProperty] private int _categoryId;
+
+    [ObservableProperty] private string _description;
+
+    [ObservableProperty] private string _name;
+
+    [ObservableProperty] private ICollection<Payment> _payments;
 }

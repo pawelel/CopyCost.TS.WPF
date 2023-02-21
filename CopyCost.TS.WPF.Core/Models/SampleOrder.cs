@@ -33,10 +33,10 @@ public class SampleOrder
 
     public ICollection<SampleOrderDetail> Details { get; set; }
 
+    public string ShortDescription => $"Order ID: {OrderId}";
+
     public override string ToString()
     {
         return $"{Company} {Status}";
     }
-
-    public string ShortDescription => $"Order ID: {OrderId}";
 }

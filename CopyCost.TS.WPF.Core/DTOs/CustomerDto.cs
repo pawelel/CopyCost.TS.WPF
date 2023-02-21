@@ -2,7 +2,7 @@
 
 public class CustomerDto
 {
-    int CustomerId { get; set; }
-    string Name { get; set; }
-    string Description { get; set; }
+    private int CustomerId { get; set; }
+    private string Name { get; set; }
+    private string Description { get; set; }
 }

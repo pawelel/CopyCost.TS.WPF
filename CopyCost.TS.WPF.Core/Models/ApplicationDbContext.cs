@@ -12,7 +12,7 @@ public class ApplicationDbContext : DbContext
     public DbSet<Payment> Payments { get; set; }
     public DbSet<Category> Categories { get; set; }
     public DbSet<Customer> Customers { get; set; }
-    
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Payment>()
@@ -20,9 +20,9 @@ public class ApplicationDbContext : DbContext
             .WithMany(p => p.Payments)
             .HasForeignKey(p => p.CategoryId);
         modelBuilder.Entity<Customer>()
-            .HasMany(c=>c.Payments)
-            .WithOne(p=>p.Customer)
-            .HasForeignKey(p=>p.CustomerId);
+            .HasMany(c => c.Payments)
+            .WithOne(p => p.Customer)
+            .HasForeignKey(p => p.CustomerId);
     }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

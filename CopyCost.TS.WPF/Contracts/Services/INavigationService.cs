@@ -4,9 +4,8 @@ namespace CopyCost.TS.WPF.Contracts.Services;
 
 public interface INavigationService
 {
-    event EventHandler<string> Navigated;
-
     bool CanGoBack { get; }
+    event EventHandler<string> Navigated;
 
     void Initialize(Frame shellFrame);
 

@@ -2,7 +2,7 @@
 
 public class CategoryDto
 {
-    int CategoryId { get; set; }
-    string Name { get; set; }
-    string Description { get; set; }
+    private int CategoryId { get; set; }
+    private string Name { get; set; }
+    private string Description { get; set; }
 }

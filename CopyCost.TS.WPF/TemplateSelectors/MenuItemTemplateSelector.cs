@@ -1,6 +1,5 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
-
 using MahApps.Metro.Controls;
 
 namespace CopyCost.TS.WPF.TemplateSelectors;
@@ -13,15 +12,9 @@ public class MenuItemTemplateSelector : DataTemplateSelector
 
     public override DataTemplate SelectTemplate(object item, DependencyObject container)
     {
-        if (item is HamburgerMenuGlyphItem)
-        {
-            return GlyphDataTemplate;
-        }
+        if (item is HamburgerMenuGlyphItem) return GlyphDataTemplate;
 
-        if (item is HamburgerMenuImageItem)
-        {
-            return ImageDataTemplate;
-        }
+        if (item is HamburgerMenuImageItem) return ImageDataTemplate;
 
         return base.SelectTemplate(item, container);
     }

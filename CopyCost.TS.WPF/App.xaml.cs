@@ -2,7 +2,6 @@
 using System.Reflection;
 using System.Windows;
 using System.Windows.Threading;
-
 using CopyCost.TS.WPF.Contracts.Services;
 using CopyCost.TS.WPF.Contracts.Views;
 using CopyCost.TS.WPF.Core.Contracts.Services;
@@ -11,7 +10,6 @@ using CopyCost.TS.WPF.Models;
 using CopyCost.TS.WPF.Services;
 using CopyCost.TS.WPF.ViewModels;
 using CopyCost.TS.WPF.Views;
-
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -24,23 +22,18 @@ public partial class App : Application
 
     public T GetService<T>()
         where T : class
-        => _host.Services.GetService(typeof(T)) as T;
-
-    public App()
     {
+        return _host.Services.GetService(typeof(T)) as T;
     }
 
     private async void OnStartup(object sender, StartupEventArgs e)
     {
         var appLocation = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
-        
+
         _host = Host.CreateDefaultBuilder(e.Args)
-                .ConfigureAppConfiguration(c =>
-                {
-                    c.SetBasePath(appLocation);
-                })
-                .ConfigureServices(ConfigureServices)
-                .Build();
+            .ConfigureAppConfiguration(c => { c.SetBasePath(appLocation); })
+            .ConfigureServices(ConfigureServices)
+            .Build();
         // Add the dispatcher unhandled exception handler
         DispatcherUnhandledException += OnDispatcherUnhandledException;
         await _host.StartAsync();
@@ -98,6 +91,6 @@ public partial class App : Application
     {
         // Handle the exception here
         e.Handled = true; // set to true to indicate that the exception has been handled
-        MessageBox.Show($"Unhandled exception occurred: {e.Exception.ToString()}");
+        MessageBox.Show($"Unhandled exception occurred: {e.Exception}");
     }
 }

@@ -1,23 +1,25 @@
-﻿using CopyCost.TS.WPF.Contracts.Activation;
+﻿using System.Windows;
+using CopyCost.TS.WPF.Contracts.Activation;
 using CopyCost.TS.WPF.Contracts.Services;
 using CopyCost.TS.WPF.Contracts.Views;
 using CopyCost.TS.WPF.ViewModels;
-
 using Microsoft.Extensions.Hosting;
 
 namespace CopyCost.TS.WPF.Services;
 
 public class ApplicationHostService : IHostedService
 {
-    private readonly IServiceProvider _serviceProvider;
+    private readonly IEnumerable<IActivationHandler> _activationHandlers;
     private readonly INavigationService _navigationService;
     private readonly IPersistAndRestoreService _persistAndRestoreService;
+    private readonly IServiceProvider _serviceProvider;
     private readonly IThemeSelectorService _themeSelectorService;
-    private readonly IEnumerable<IActivationHandler> _activationHandlers;
-    private IShellWindow _shellWindow;
     private bool _isInitialized;
+    private IShellWindow _shellWindow;
 
-    public ApplicationHostService(IServiceProvider serviceProvider, IEnumerable<IActivationHandler> activationHandlers, INavigationService navigationService, IThemeSelectorService themeSelectorService, IPersistAndRestoreService persistAndRestoreService)
+    public ApplicationHostService(IServiceProvider serviceProvider, IEnumerable<IActivationHandler> activationHandlers,
+        INavigationService navigationService, IThemeSelectorService themeSelectorService,
+        IPersistAndRestoreService persistAndRestoreService)
     {
         _serviceProvider = serviceProvider;
         _activationHandlers = activationHandlers;
@@ -56,24 +58,18 @@ public class ApplicationHostService : IHostedService
 
     private async Task StartupAsync()
     {
-        if (!_isInitialized)
-        {
-            await Task.CompletedTask;
-        }
+        if (!_isInitialized) await Task.CompletedTask;
     }
 
     private async Task HandleActivationAsync()
     {
         var activationHandler = _activationHandlers.FirstOrDefault(h => h.CanHandle());
 
-        if (activationHandler != null)
-        {
-            await activationHandler.HandleAsync();
-        }
+        if (activationHandler != null) await activationHandler.HandleAsync();
 
         await Task.CompletedTask;
 
-        if (App.Current.Windows.OfType<IShellWindow>().Count() == 0)
+        if (Application.Current.Windows.OfType<IShellWindow>().Count() == 0)
         {
             // Default activation that navigates to the apps default page
             _shellWindow = _serviceProvider.GetService(typeof(IShellWindow)) as IShellWindow;
