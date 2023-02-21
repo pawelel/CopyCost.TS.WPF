@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CopyCost.TS.WPF", "CopyCost.TS.WPF\CopyCost.TS.WPF.csproj", "{B54C959C-A432-45A7-9E75-75AEED53F25C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CopyCost.TS.WPF.Core", "CopyCost.TS.WPF.Core\CopyCost.TS.WPF.Core.csproj", "{AE423968-7647-442A-A15E-9B145F756C5B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B54C959C-A432-45A7-9E75-75AEED53F25C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B54C959C-A432-45A7-9E75-75AEED53F25C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B54C959C-A432-45A7-9E75-75AEED53F25C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B54C959C-A432-45A7-9E75-75AEED53F25C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE423968-7647-442A-A15E-9B145F756C5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE423968-7647-442A-A15E-9B145F756C5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE423968-7647-442A-A15E-9B145F756C5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE423968-7647-442A-A15E-9B145F756C5B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3389AE22-7FF4-4589-B88C-181DE2594A58}
+	EndGlobalSection
+EndGlobal
