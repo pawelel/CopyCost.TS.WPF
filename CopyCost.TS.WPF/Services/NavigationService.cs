@@ -2,6 +2,7 @@
 using System.Windows.Navigation;
 using CopyCost.TS.WPF.Contracts.Services;
 using CopyCost.TS.WPF.Contracts.ViewModels;
+using CopyCost.TS.WPF.Helpers;
 
 namespace CopyCost.TS.WPF.Services;
 

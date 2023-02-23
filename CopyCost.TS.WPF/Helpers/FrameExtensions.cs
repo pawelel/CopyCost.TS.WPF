@@ -1,4 +1,7 @@
-﻿namespace System.Windows.Controls;
+﻿using System.Windows;
+using System.Windows.Controls;
+
+namespace CopyCost.TS.WPF.Helpers;
 
 public static class FrameExtensions
 {

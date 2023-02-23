@@ -1,7 +1,10 @@
 ﻿using System.Windows.Controls;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CopyCost.TS.WPF.Contracts.Services;
-using CopyCost.TS.WPF.ViewModels;
+using CopyCost.TS.WPF.Features.Categories;
+using CopyCost.TS.WPF.Features.Customers;
+using CopyCost.TS.WPF.Features.Payments;
+using CopyCost.TS.WPF.Features.Settings;
 using CopyCost.TS.WPF.Views;
 
 namespace CopyCost.TS.WPF.Services;

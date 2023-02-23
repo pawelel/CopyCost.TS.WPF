@@ -2,7 +2,6 @@
 using System.IO;
 using System.Windows;
 using CopyCost.TS.WPF.Contracts.Services;
-using CopyCost.TS.WPF.Core.Contracts.Services;
 using CopyCost.TS.WPF.Models;
 using Microsoft.Extensions.Options;
 

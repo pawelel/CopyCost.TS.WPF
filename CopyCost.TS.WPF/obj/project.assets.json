@@ -62,6 +62,30 @@
           }
         }
       },
+      "Mediator.Abstractions/2.0.30": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "System.Threading.Tasks.Extensions": "4.5.4"
+        },
+        "compile": {
+          "lib/netstandard2.1/Mediator.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/Mediator.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Mediator.SourceGenerator/2.0.30": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0"
+        }
+      },
       "Microsoft.Data.Sqlite.Core/7.0.3": {
         "type": "package",
         "dependencies": {
@@ -1059,19 +1083,13 @@
           "buildTransitive/net6.0/System.Text.Json.targets": {}
         }
       },
-      "CopyCost.TS.WPF.Core/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "CommunityToolkit.Mvvm": "8.1.0",
-          "Microsoft.EntityFrameworkCore.Sqlite": "7.0.3",
-          "Newtonsoft.Json": "13.0.2"
-        },
+      "System.Threading.Tasks.Extensions/4.5.4": {
+        "type": "package",
         "compile": {
-          "bin/placeholder/CopyCost.TS.WPF.Core.dll": {}
+          "ref/netcoreapp2.1/_._": {}
         },
         "runtime": {
-          "bin/placeholder/CopyCost.TS.WPF.Core.dll": {}
+          "lib/netcoreapp2.1/_._": {}
         }
       }
     }
@@ -1162,6 +1180,33 @@
         "mahapps.metro.logo.png",
         "mahapps.metro.nuspec",
         "tools/VisualStudioToolsManifest.xml"
+      ]
+    },
+    "Mediator.Abstractions/2.0.30": {
+      "sha512": "btPWIaZ7XQvzScEF5ighidKbeCvV1tAv+42tUc/rLpSUoLirgLZELnerdBYeyIdskPu5JTm8YH934Tgiy+ZxJA==",
+      "type": "package",
+      "path": "mediator.abstractions/2.0.30",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.1/Mediator.dll",
+        "lib/netstandard2.1/Mediator.xml",
+        "mediator.abstractions.2.0.30.nupkg.sha512",
+        "mediator.abstractions.nuspec"
+      ]
+    },
+    "Mediator.SourceGenerator/2.0.30": {
+      "sha512": "lurx0iIj/IQ4Vs4Q9dZ4dtjqE9um7+NJV4pWReEfNDQPOpjCa0Lxt1eM3b+o4lbw7eROr+Q7YooouSjCsonb8Q==",
+      "type": "package",
+      "path": "mediator.sourcegenerator/2.0.30",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "analyzers/dotnet/cs/Mediator.SourceGenerator.Implementation.dll",
+        "analyzers/dotnet/roslyn3.8/cs/Mediator.SourceGenerator.Roslyn38.dll",
+        "analyzers/dotnet/roslyn4.0/cs/Mediator.SourceGenerator.Roslyn40.dll",
+        "mediator.sourcegenerator.2.0.30.nupkg.sha512",
+        "mediator.sourcegenerator.nuspec"
       ]
     },
     "Microsoft.Data.Sqlite.Core/7.0.3": {
@@ -2431,21 +2476,57 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "CopyCost.TS.WPF.Core/1.0.0": {
-      "type": "project",
-      "path": "../CopyCost.TS.WPF.Core/CopyCost.TS.WPF.Core.csproj",
-      "msbuildProject": "../CopyCost.TS.WPF.Core/CopyCost.TS.WPF.Core.csproj"
+    "System.Threading.Tasks.Extensions/4.5.4": {
+      "sha512": "zteT+G8xuGu6mS+mzDzYXbzS7rd3K6Fjb9RiZlYlJPam2/hU7JCBZBVEcywNuR+oZ1ncTvc/cq0faRr3P01OVg==",
+      "type": "package",
+      "path": "system.threading.tasks.extensions/4.5.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net461/System.Threading.Tasks.Extensions.dll",
+        "lib/net461/System.Threading.Tasks.Extensions.xml",
+        "lib/netcoreapp2.1/_._",
+        "lib/netstandard1.0/System.Threading.Tasks.Extensions.dll",
+        "lib/netstandard1.0/System.Threading.Tasks.Extensions.xml",
+        "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll",
+        "lib/netstandard2.0/System.Threading.Tasks.Extensions.xml",
+        "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.dll",
+        "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.xml",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/netcoreapp2.1/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.threading.tasks.extensions.4.5.4.nupkg.sha512",
+        "system.threading.tasks.extensions.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net6.0-windows10.0.19041": [
-      "CopyCost.TS.WPF.Core >= 1.0.0",
+      "CommunityToolkit.Mvvm >= 8.1.0",
       "MahApps.Metro >= 2.4.9",
-      "Microsoft.Extensions.Hosting >= 7.0.1"
+      "Mediator.Abstractions >= 2.0.30",
+      "Mediator.SourceGenerator >= 2.0.30",
+      "Microsoft.EntityFrameworkCore.Sqlite >= 7.0.3",
+      "Microsoft.Extensions.Hosting >= 7.0.1",
+      "Newtonsoft.Json >= 13.0.2"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\PawełPrzytuła\\.nuget\\packages\\": {},
+    "C:\\Users\\PawelPrzytulaM2T\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
@@ -2454,14 +2535,14 @@
       "projectUniqueName": "D:\\Private\\CopyCost.TS.WPF\\CopyCost.TS.WPF\\CopyCost.TS.WPF.csproj",
       "projectName": "CopyCost.TS.WPF",
       "projectPath": "D:\\Private\\CopyCost.TS.WPF\\CopyCost.TS.WPF\\CopyCost.TS.WPF.csproj",
-      "packagesPath": "C:\\Users\\PawełPrzytuła\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\PawelPrzytulaM2T\\.nuget\\packages\\",
       "outputPath": "D:\\Private\\CopyCost.TS.WPF\\CopyCost.TS.WPF\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\PawełPrzytuła\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\PawelPrzytulaM2T\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2476,11 +2557,7 @@
       "frameworks": {
         "net6.0-windows10.0.19041": {
           "targetAlias": "net6.0-windows10.0.19041.0",
-          "projectReferences": {
-            "D:\\Private\\CopyCost.TS.WPF\\CopyCost.TS.WPF.Core\\CopyCost.TS.WPF.Core.csproj": {
-              "projectPath": "D:\\Private\\CopyCost.TS.WPF\\CopyCost.TS.WPF.Core\\CopyCost.TS.WPF.Core.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -2493,13 +2570,35 @@
       "net6.0-windows10.0.19041": {
         "targetAlias": "net6.0-windows10.0.19041.0",
         "dependencies": {
+          "CommunityToolkit.Mvvm": {
+            "target": "Package",
+            "version": "[8.1.0, )"
+          },
           "MahApps.Metro": {
             "target": "Package",
             "version": "[2.4.9, )"
           },
+          "Mediator.Abstractions": {
+            "target": "Package",
+            "version": "[2.0.30, )"
+          },
+          "Mediator.SourceGenerator": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[2.0.30, )"
+          },
+          "Microsoft.EntityFrameworkCore.Sqlite": {
+            "target": "Package",
+            "version": "[7.0.3, )"
+          },
           "Microsoft.Extensions.Hosting": {
             "target": "Package",
             "version": "[7.0.1, )"
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.2, )"
           }
         },
         "imports": [

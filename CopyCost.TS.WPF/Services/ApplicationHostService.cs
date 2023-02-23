@@ -2,7 +2,7 @@
 using CopyCost.TS.WPF.Contracts.Activation;
 using CopyCost.TS.WPF.Contracts.Services;
 using CopyCost.TS.WPF.Contracts.Views;
-using CopyCost.TS.WPF.ViewModels;
+using CopyCost.TS.WPF.Features.Payments;
 using Microsoft.Extensions.Hosting;
 
 namespace CopyCost.TS.WPF.Services;
